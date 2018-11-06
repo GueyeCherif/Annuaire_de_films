@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+	<link rel="stylesheet" type="text/css" href="public/css/style.css">
+  <link rel="stylesheet" type="text/css" href="public/css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="public/css/demo.css">
+  <link rel="stylesheet" type="text/css" href="public/css/component.css" />
+  <link href='http://fonts.googleapis.com/css?family=Raleway:200,400,800' rel='stylesheet' type='text/css'>
+
+
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+
+
+	<title> Sénémania</title>
+</head>
+<body>
+  <div class="container demo-1">
+      <div class="content">
+        <div id="large-header" class="large-header">
+          <canvas id="demo-canvas"></canvas>
+          <h2 class="main-title" id="logo" style="font-size:58px !important">Séné <span class="thin">Mania</span></h2>
+        </div>
+       
+    </div>
+  </div>
+
+<nav class="navbar navbar-expand-md bg-dark navbar-dark sticky-top sticky-top">
+  <!-- Brand -->
+  <a class="navbar-brand" href="index.php" id="logo">Sénémania</a>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+  <!-- Toggler/collapsibe Button -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <!-- Navbar links -->
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="index.php">Accueil</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="model/realisateur.php">les realisateurs</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="model/acteur.php">les acteurs</a>
+      </li> 
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       <li class="nav-item" id="li_admin">
+        <a class="nav-link " href="./admin/index.php"><i class="fas fa-lock"></i> Administration</a>
+      </li> 
+    </ul>
+  </div> 
+</nav>
+
+
+
+<center><h1>Les films</h1></center>
+<br><br>
+<center>
+<div class="row">
+	
+	{% for getPosts in req %}
+	
+
+			<div class="col-md-3 col-sm-6 mb-4">
+        <div id="f1_container">
+<div id="f1_card" class="shadow">
+  <div class="front face">
+    <a  href="index.php?action=post&amp;id_film={{getPosts.id_film}}">
+<img src="{{getPosts.photo_film}}" > <br>
+  </div>
+  <div class="back face center">
+    <p><h6 style="color:black">Description</h6>{{getPosts.description}}</p>
+  </div>
+</div>
+</div>
+		
+	
+	&nbsp; {{ getPosts.nom_film }}</a> 
+  </div>
+
+  {% endfor  %}
+  </div>
+</center>
+
+</body>
+ <script src="public/js/TweenLite.min.js"></script>
+    <script src="public/js/EasePack.min.js"></script>
+  
+    <script src="public/js/demo-1.js"></script>
+</html>
+

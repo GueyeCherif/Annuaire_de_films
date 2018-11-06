@@ -1,0 +1,141 @@
+body{
+	padding-right: -50px !important;
+	margin:0!important;
+
+	
+	background-size: cover;
+overflow-x:hidden;	
+}
+
+#f1_container {
+  position: relative;
+  margin: 10px auto;
+  width: 70%;
+  height: 295px;
+  z-index: 1;
+
+
+}
+#f1_container {
+  perspective: 1000;
+}
+#f1_card {
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: all 1.0s linear;
+
+}
+#f1_container:hover #f1_card {
+  transform: rotateY(180deg);
+  box-shadow: -5px 5px 5px #aaa;
+}
+.face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+
+}
+.face.back {
+  display: block;
+  transform: rotateY(180deg);
+  box-sizing: border-box;
+  padding: 10px;
+  color: white;
+  text-align: center;
+  background-color: #aaa;
+ overflow: hidden;
+
+}
+
+#li_admin
+{
+	position: relative !important;
+	float: left !important;
+
+}
+div div a 
+{
+	text-decoration: none !important;
+	color: black !important;
+}
+
+#logo
+{
+	
+			
+			margin: 0;
+			padding: 0;
+		    font-size:25px; 
+			text-transform: uppercase;
+			background: url("../img/img.gif");
+			background-size: 500px;
+			-webkit-background-clip: text;
+			-webkit-text-fill-color:transparent;
+			-webkit-text-stroke:2px #0000;
+			animation: animate 15s linear infinite;
+}
+
+			@keyframes animate
+			{
+				0%
+				{
+					background-position: 0 0;
+				}
+				100%
+				{
+
+					background-position: 800px -200px;
+				}
+			}
+
+			/*formulaire*/
+
+ /* Style inputs with type="text", select elements and textareas */
+input[type=text]{
+    width: 30%;
+    margin-left: 35%;
+    padding: 12px;
+    font-size: 20px;
+    border: 1px solid #ccc; /* Gray border */
+    border-radius: 4px; /* Rounded borders */
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 6px; /* Add a top margin */
+    margin-bottom: 16px; /* Bottom margin */
+    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+/* Style inputs with type="text",email */
+input[type=password] {
+    width: 30%; /* Full width */
+    margin-left: 35%;
+    padding: 12px; /* Some padding */
+		font-size: 20px;
+    border: 1px solid #ccc; /* Gray border */
+    border-radius: 4px; /* Rounded borders */
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 6px; /* Add a top margin */
+    margin-bottom: 16px; /* Bottom margin */
+    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+    background-color: #343a40;
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 30%;
+    margin-left: 35%;
+
+}
+
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+/* Add a background color and some padding around the form */
